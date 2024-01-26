@@ -90,6 +90,10 @@ body{
     padding-right: 8px;
 }
 
+.library .library__button .biblioteca {
+    margin-left: 10px; 
+}
+
 .library .library__content .fa-plus{
     margin: 24px 10px;
 }
@@ -174,3 +178,14 @@ body{
     padding: 8px;
     border-radius: 20px;
 } 
+
+.rodape .rodape__div{
+    display: flex;
+    background-color: #242424;
+    margin-top: 520px;
+    position: fixed;
+    padding: 25px;
+    width: 1300px;
+    margin-left: 10px;
+    
+}
