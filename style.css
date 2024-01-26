@@ -81,6 +81,9 @@ body{
     text-decoration: none;
     text-transform: none;
     padding: 20px 10px;
+    cursor: pointer;
+    transition: all .5s ease;
+
 }
 
 .library .library__button .fa{
@@ -179,13 +182,56 @@ body{
     border-radius: 20px;
 } 
 
-.rodape .rodape__div{
+.rodape {
     display: flex;
-    background-color: #242424;
-    margin-top: 520px;
     position: fixed;
-    padding: 25px;
-    width: 1300px;
+    bottom: 0;
+    width: 98.5%;  
+    margin: 10px 10px 10px 10px;
+    background: linear-gradient(90deg, rgba(175,41,151,1) 0%, rgba(126,99,198,1) 50%, rgba(81,154,244,1) 100%);
+}
+
+.Inscreva__button{
+    width: 200px;
+    border-radius: 40px;
+    transition: all .3s ease-in-out; /*transição suave*/
+    padding: 15px;
+    border: none;
+    margin-left: 1130px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+    
+}
+
+/*Ao passar o mouse por cima do botão, muda as cores e altera o tamanho para destacar ele*/
+.Inscreva__button:hover{
+    background-color:#ffffff;
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);   
+    cursor: pointer;
+    
+}
+
+.rodape .linha1{
+    font-weight: 600;  
+    color: #fff;
+    font-family: "DM Sans", sans-serif;
+    padding: 3px;
+    margin-top: 10px;
+    width: 900px;
     margin-left: 10px;
     
 }
+
+.rodape .linha2{
+    font-weight: 100;
+    color: white;
+    font-family: "DM Sans", sans-serif;   
+    padding: 5px;
+    width: 900px;
+    margin-bottom: -50px;
+    margin-left: 10px;
+   
+}
+    
