@@ -174,7 +174,7 @@
     width: 160px;
     height: 160px;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 10px;
   }
   
   .cards span {
@@ -238,8 +238,8 @@
     right: 0;
     bottom: 0;
     height: auto;
-    width: 107px;
-    transform: rotate(25deg) translate(18%, -2%);
+    width: 110px; /*Tamanho da imagem*/
+    transform: rotate(25deg) translate(20%, -5%);/*Rotação e direção da imagem*/
   }
   
   /* CARD ARTISTA */

@@ -1,0 +1,5 @@
+@media screen and(max-width: 1015px) { /*resolução da tela => dentro desta resolução a classe abaixo será aplicada*/
+    .offer__list-item{
+        grid-template-columns: 1fr 1fr; /*tela até 1015 trazer 2 colunas*/
+    }
+}
