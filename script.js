@@ -1,32 +1,34 @@
 const searchInput = document.getElementById('search-input');
-const resultsArtist = document.getElementById('result-artist')
-const resultsPlaylist = document.getElementById('result-playlists')
+const resultArtist = document.getElementById("result-artist");
+const resultPlaylist = document.getElementById('result-playlists');
 
-function requestApi(searchTerm){ //revisar API//
-    fetch(`https://api.spotify.com/v1/search?query=${searchTerm}&type=track,artist&market=ES`)
+function requestApi(searchTerm) {
+    const url = `http://localhost:3000/artists?name_like=${searchTerm}`
+    fetch(url)
         .then((response) => response.json())
-        .then(result => displayResults(result))
+        .then((result) => displayResults(result))
 }
 
-function displayResults(result){
-    resultsPlaylist.classList.add('hidden');
-    const artisName = document.getElementById('artist-name');
-    const artisImage = document.getElementById('artist-img');
+function displayResults(result) {
+    resultPlaylist.classList.add("hidden")
+    const artistName = document.getElementById('artist-name');
+    const artistImage = document.getElementById('artist-img');
 
     result.forEach(element => {
-        artisName.innerText = element.name;
-        artisImage.src = element.urlImg;
+        artistName.innerText = element.name;
+        artistImage.src = element.urlImg;
     });
 
-    resultsArtist.classList.remove('hidden');
-    
+    resultArtist.classList.remove('hidden');
 }
 
-document.addEventListener('input', function() {
-        const searchTerm = searchInput.value.toLowerCase();
-        if (searchTerm === '') {
-            resultsPlaylist.classList.add('hidden')
-            resultsArtist.classList.remove('hidden')
-            return;
-        }
+document.addEventListener('input', function () {
+    const searchTerm = searchInput.value.toLowerCase();
+    if (searchTerm === '') {
+        resultPlaylist.classList.add('hidden');
+        resultArtist.classList.remove('hidden');
+        return
+    }
+    
+    requestApi(searchTerm);
 })
